@@ -1,0 +1,37 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "grant",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060fd8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806370284d1914603757806370a08231146061575b600080fd5b605f60423660046099565b6001600160a01b0316600090815260208190526040902060019055565b005b6087606c3660046099565b6001600160a01b031660009081526020819052604090205490565b60405190815260200160405180910390f35b60006020828403121560aa57600080fd5b81356001600160a01b038116811460c057600080fd5b939250505056fea2646970667358221220f0973c9bca06dcdd74dd390607ac72fd6257ed41dbd638abcd9702da53dbcef664736f6c63430008260033"
+}

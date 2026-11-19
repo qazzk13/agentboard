@@ -1,0 +1,8 @@
+node_modules/
+testnet-wallet.json
+mainnet-deploy.json
+mainnet-seed-calls.json
+mainnet-seed-results.json
+testnet-deployment.json
+build/*.metadata.json
+.DS_Store

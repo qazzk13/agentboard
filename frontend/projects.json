@@ -1,0 +1,296 @@
+{
+ "generatedAt": "2026-11-19T06:46:15.448725+00:00",
+ "scanTime": "2026-11-18T18:42:00+08:00",
+ "source": "Four.Meme Agent ID Exclusive (protocol 2004), via agent-id-scan-15m",
+ "count": 16,
+ "projects": [
+  {
+   "name": "007",
+   "symbol": "007",
+   "contract": "0x2862879702f6c241a27a0ac728dc7f45d819ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794983958000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "NVIDIA",
+   "symbol": "NVIDIA",
+   "contract": "0xce0ddaceba713d455d4bdde49a3b7fef02daffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794971896000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "NVIDIA",
+   "symbol": "NVIDIA",
+   "contract": "0xd34fb169f0931aa7e90fee16a136e7eb7614ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794971890000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "PRIVY",
+   "symbol": "PRIVY",
+   "contract": "0x5837a35d7a6f519666df947e4def49906eb8ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794969064000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "PRIVY",
+   "symbol": "PRIVY",
+   "contract": "0x1f8316b5606da50c0caf7b66e05abfa18748ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794969034000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "Apple",
+   "symbol": "Apple",
+   "contract": "0x80acb1ff3a103a5c7dd1775679bf6ecf486d4444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794966844000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "Apple",
+   "symbol": "Apple",
+   "contract": "0x0127a2642db51deb2d94867c5254d769748f4444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": null,
+   "createTime": 1794966826000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": null,
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "我的男友黄宝宝",
+   "symbol": "HBB",
+   "contract": "0x9e77456f5e62e9d02d9159ef41a84aca3b34ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794965327000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "我的男友黄宝宝",
+   "symbol": "HBB",
+   "contract": "0x28396f7cd412f5433a0fd220f818d71da5cfffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794965292000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "3x3ai",
+   "symbol": "3x3",
+   "contract": "0xf53fb427d0b31a7b9a0332d10edeb696d46cffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794963362000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "3x3ai",
+   "symbol": "3x3",
+   "contract": "0x88af611246d7eb5544a44dd8ff2c096de882ffff",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794963308000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "比特币",
+   "symbol": "比特币",
+   "contract": "0x4d708cdbbbdf2de3456b7af9f5a6e45b9d9e4444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": null,
+   "createTime": 1794962075000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": null,
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "比特币",
+   "symbol": "比特币",
+   "contract": "0x34b277780c4cecba233d96381ed5434f7c0a4444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794962069000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "6666",
+   "symbol": "6666",
+   "contract": "0x9cd43a7c640ec8b2b20046079e9dcc5b4e164444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794926663000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "6666",
+   "symbol": "6666",
+   "contract": "0x4bec4271fc41eadb451589894f712d6f05604444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794926640000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  },
+  {
+   "name": "Dragon",
+   "symbol": "Digital dragon",
+   "contract": "0x4c70ac65e444e7d26cb336cb3f394b11686e4444",
+   "stage": "Finalizing",
+   "progress": "0",
+   "holders": 0,
+   "createTime": 1794926055000,
+   "liquidity": null,
+   "marketCap": null,
+   "volume": null,
+   "top10Percent": "100",
+   "sniperPercent": null,
+   "audit": "未审计",
+   "flags": [
+    "暂无持有人，极早期"
+   ]
+  }
+ ]
+}
