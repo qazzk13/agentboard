@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentBoard — Agent ID 专属新盘 / 免费 Mint 看板</title>
+<style>
+  :root{--bg:#0b0e13;--card:#151a22;--line:#232b38;--text:#e8edf4;--muted:#8b96a7;--gold:#f0b90b;--red:#e5534b;--green:#3fb68b;--blue:#6ea8fe}
+  *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+  header{padding:20px 16px 8px;max-width:1080px;margin:0 auto}
+  h1{font-size:22px;margin:0 0 4px} h1 .gold{color:var(--gold)}
+  .sub{color:var(--muted);font-size:13px;line-height:1.6}
+  .stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:100px}
+  .stat b{font-size:20px;display:block}.stat span{color:var(--muted);font-size:12px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;align-items:center}
+  input,select{background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:14px}
+  input[type=text]{flex:1;min-width:180px}
+  button{background:var(--gold);color:#111;border:0;border-radius:8px;padding:9px 14px;font-size:14px;font-weight:600;cursor:pointer}
+  button.ghost{background:var(--card);color:var(--text);border:1px solid var(--line);font-weight:500}
+  button:disabled{opacity:.45;cursor:not-allowed}
+  button.on{background:var(--gold);color:#111;border-color:var(--gold)}
+  main{max-width:1080px;margin:0 auto;padding:0 16px 40px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+  .panel h2{font-size:15px;margin:0 0 8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .card h3{margin:0 0 2px;font-size:16px;word-break:break-all}
+  .sym{color:var(--gold);font-size:12px}
+  .row{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px;margin-top:6px}
+  .row b{color:var(--text);font-weight:600}
+  .addr{font-family:monospace;font-size:11.5px;color:var(--muted);word-break:break-all;margin-top:8px}
+  .addr a{color:var(--blue);text-decoration:none}
+  .badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;border:1px solid var(--line);margin-right:6px}
+  .stage-New{color:var(--blue)}.stage-Finalizing{color:var(--gold)}.stage-Migrated{color:var(--green)}
+  .flag{color:var(--red);font-size:12px;margin-top:6px}
+  .acts{display:flex;gap:8px;margin-top:10px}
+  .acts button{flex:1;padding:7px 8px;font-size:13px}
+  .ok{color:var(--green)} .warn{color:var(--gold)} .err{color:var(--red)}
+  .small{font-size:12px;color:var(--muted);line-height:1.7}
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1d2531;border:1px solid var(--line);color:var(--text);padding:10px 16px;border-radius:10px;font-size:13.5px;display:none;max-width:92vw;z-index:9}
+  footer{max-width:1080px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px;line-height:1.8}
+</style>
+</head>
+<body>
+<header>
+  <h1>Agent<span class="gold">Board</span></h1>
+  <div class="sub">只给 <b>Agent ID</b> 持有者用的新盘看板：汇总 Four.Meme Agent ID 专属盘 + 免费 Mint，每条过统一初筛给结论。收藏、投票、签到全部链上验证 Agent ID（一钱包一 ID、不可转让，刷不了票）。</div>
+  <div class="stats">
+    <div class="stat"><b id="stCount">–</b><span>在板项目</span></div>
+    <div class="stat"><b id="stUsers">–</b><span>链上注册用户</span></div>
+    <div class="stat"><b id="stCheckins">–</b><span>链上总签到</span></div>
+    <div class="stat"><b id="stScan">–</b><span>数据更新时间</span></div>
+  </div>
+  <div class="bar">
+    <select id="netSel">
+      <option value="56">主网（BNB Chain）</option>
+      <option value="97">测试网演示（BSC Testnet）</option>
+    </select>
+    <button id="btnConnect">连接钱包</button>
+    <span id="acct" class="small"></span>
+  </div>
+  <div class="panel" id="mePanel" style="display:none">
+    <h2>我的 AgentBoard</h2>
+    <div id="meBody" class="small">连接钱包后显示。</div>
+    <div class="bar" id="regBar" style="display:none">
+      <input type="text" id="regName" placeholder="输入你的 .ai 名字，如 888800.ai" style="flex:1;min-width:200px">
+      <button id="btnRegister">登记我的 .ai 名</button>
+    </div>
+    <div class="bar">
+      <button id="btnCheckIn" class="ghost">每日签到</button>
+      <span id="streakInfo" class="small"></span>
+    </div>
+  </div>
+  <div class="bar">
+    <input type="text" id="q" placeholder="搜索名字 / 合约地址">
+    <select id="stageSel">
+      <option value="">全部阶段</option><option>New</option><option>Finalizing</option><option>Migrated</option>
+    </select>
+    <select id="sortSel">
+      <option value="new">最新优先</option><option value="upvotes">链上投票 ↓</option><option value="bookmarks">链上收藏 ↓</option><option value="holders">持有人 ↓</option>
+    </select>
+  </div>
+</header>
+<main><div class="grid" id="grid"></div><div id="empty" class="small" style="display:none;padding:12px 2px">没有符合条件的项目。</div></main>
+<footer>
+  风险提示：本看板只做信息汇总与初筛标记，<b>不构成投资建议</b>。初筛标记为规则引擎结果、非专业审计；新盘与免费 Mint 风险极高，请自行核查合约后再决定。AgentBoard 为社区独立项目，与 Binance / BNB Chain 无隶属关系。Agent ID 门控只读取官方注册表合约的 balanceOf，不查询、不展示任何他人的钱包信息。
+</footer>
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.13.4/dist/ethers.umd.min.js"></script>
+<script>
+const NETS = {
+  97: { name: "BSC Testnet", rpc: "https://bsc-testnet-rpc.publicnode.com", explorer: "https://testnet.bscscan.com",
+        registry: "0x1BE14701eA858694ac8e8B43BdA55AAb03a7B6eF", gate: "0x8Aa89AFb3c085c11a9Da002072646e781D33D9B0", mock: true },
+  56: { name: "BNB Chain", rpc: "https://bsc-dataseed.bnbchain.org", explorer: "https://bscscan.com",
+        registry: "0x60b9262456de011f7d15a54cdd8c48baaa8b022f", gate: "0x64cf973d92660E6637Bc52d4c3e2FF99CFcAEdb8", mock: false }
+};
+const REG_ABI = ["function balanceOf(address) view returns(uint256)"];
+const GATE_ABI = [
+  "function registerProfile(string agentName)",
+  "function checkIn()",
+  "function toggleBookmark(uint256 projectId)",
+  "function upvote(uint256 projectId)",
+  "function profiles(address) view returns(string agentName,uint256 lastCheckInDay,uint256 streak,uint256 totalCheckIns,bool registered)",
+  "function projects(uint256) view returns(address contractAddr,string name,string category,bool active,uint256 bookmarks,uint256 upvotes)",
+  "function projectCount() view returns(uint256)",
+  "function projectIndexPlusOne(address) view returns(uint256)",
+  "function hasBookmarked(address,uint256) view returns(bool)",
+  "function hasUpvoted(address,uint256) view returns(bool)",
+  "function isAgentHolder(address) view returns(bool)",
+  "function totalUsers() view returns(uint256)",
+  "function totalCheckIns() view returns(uint256)"
+];
+let chainId = 56, provider, signer, account = null, holder = false, myProfile = null;
+let offchain = [], onchain = {}; // contract(lower) -> {id, bookmarks, upvotes, mine, myUp}
+
+const $ = id => document.getElementById(id);
+function toast(msg, ms=4200){ const t=$("toast"); t.textContent=msg; t.style.display="block"; setTimeout(()=>t.style.display="none", ms); }
+function short(a){ return a ? a.slice(0,6)+"…"+a.slice(-4) : ""; }
+function readProvider(){ return new ethers.JsonRpcProvider(NETS[chainId].rpc, new ethers.Network("net", chainId), { staticNetwork: true }); }
+
+async function loadBoard(){
+  provider = readProvider();
+  const res = await fetch("projects.json", { cache: "no-store" });
+  const data = await res.json();
+  offchain = data.projects || [];
+  $("stScan").textContent = (data.scanTime || data.generatedAt || "–").replace("T"," ").slice(0,16);
+  onchain = {};
+  const net = NETS[chainId];
+  if (net.gate){
+    try {
+      const gate = new ethers.Contract(net.gate, GATE_ABI, provider);
+      const n = Number(await gate.projectCount());
+      $("stUsers").textContent = Number(await gate.totalUsers());
+      $("stCheckins").textContent = Number(await gate.totalCheckIns());
+      for (let i=0;i<n;i++){
+        const p = await gate.projects(i);
+        if (!p.active) continue;
+        const key = p.contractAddr.toLowerCase();
+        onchain[key] = { id: i, bookmarks: Number(p.bookmarks), upvotes: Number(p.upvotes) };
+        if (account){
+          onchain[key].mine = await gate.hasBookmarked(account, i);
+          onchain[key].myUp = await gate.hasUpvoted(account, i);
+        }
+      }
+    } catch(e){ console.warn("gate read failed", e); }
+  } else {
+    $("stUsers").textContent = "–"; $("stCheckins").textContent = "–";
+  }
+  render();
+}
+
+function render(){
+  const q = $("q").value.trim().toLowerCase(), stage = $("stageSel").value, sort = $("sortSel").value;
+  let list = offchain.filter(p => (!stage || p.stage===stage) && (!q || (p.name||"").toLowerCase().includes(q) || (p.contract||"").toLowerCase().includes(q)));
+  const oc = p => onchain[(p.contract||"").toLowerCase()] || { bookmarks:0, upvotes:0 };
+  if (sort==="holders") list.sort((a,b)=>(b.holders||0)-(a.holders||0));
+  if (sort==="upvotes") list.sort((a,b)=>oc(b).upvotes-oc(a).upvotes);
+  if (sort==="bookmarks") list.sort((a,b)=>oc(b).bookmarks-oc(a).bookmarks);
+  if (sort==="new") list.sort((a,b)=>(b.createTime||0)-(a.createTime||0));
+  $("stCount").textContent = list.length;
+  $("empty").style.display = list.length ? "none" : "block";
+  const net = NETS[chainId];
+  $("grid").innerHTML = list.map(p => {
+    const o = oc(p), listed = !!onchain[(p.contract||"").toLowerCase()];
+    const age = p.createTime ? Math.max(0, Math.round((Date.now()-p.createTime)/60000)) : null;
+    const ageTxt = age===null ? "–" : age<60 ? age+" 分钟前" : age<1440 ? Math.round(age/60)+" 小时前" : Math.round(age/1440)+" 天前";
+    const flags = (p.flags||[]).map(f=>`<div class="flag">⚠ ${f}</div>`).join("");
+    const canAct = account && holder && listed;
+    return `<div class="card">
+      <h3>${p.name||"(未命名)"} <span class="sym">${p.symbol||""}</span></h3>
+      <div><span class="badge stage-${p.stage}">${p.stage||""}</span><span class="badge">${p.audit||"未审计"}</span>${listed?'<span class="badge" style="color:var(--green)">已上链</span>':''}</div>
+      <div class="row"><span>上线</span><b>${ageTxt}</b></div>
+      <div class="row"><span>持有人</span><b>${p.holders ?? "–"}</b></div>
+      <div class="row"><span>进度</span><b>${p.progress ?? "–"}</b></div>
+      <div class="row"><span>链上收藏 / 投票</span><b>${o.bookmarks} / ${o.upvotes}</b></div>
+      ${flags}
+      <div class="addr">${p.contract} · <a href="${net.explorer}/token/${p.contract}" target="_blank" rel="noopener">BscScan</a></div>
+      <div class="acts">
+        <button class="ghost ${o.mine?'on':''}" data-act="bm" data-id="${o.id}" ${canAct?"":"disabled"}>${o.mine?"已收藏":"收藏"}</button>
+        <button class="ghost ${o.myUp?'on':''}" data-act="up" data-id="${o.id}" ${canAct?"":"disabled"}>${o.myUp?"已投票":"投票"}</button>
+      </div>
+      ${account && !listed ? '<div class="small">该项目尚未上架到链上看板，暂不能收藏/投票。</div>' : ''}
+      ${!account ? '<div class="small">连接钱包并验证 Agent ID 后可收藏/投票。</div>' : ''}
+    </div>`;
+  }).join("");
+  document.querySelectorAll("[data-act]").forEach(b => b.onclick = () => act(b.dataset.act, Number(b.dataset.id), b));
+}
+
+async function refreshMe(){
+  const net = NETS[chainId];
+  if (!account){ $("mePanel").style.display="none"; return; }
+  $("mePanel").style.display="block";
+  const reg = new ethers.Contract(net.registry, REG_ABI, provider);
+  holder = Number(await reg.balanceOf(account)) > 0;
+  let html = `地址 <b>${short(account)}</b> · 网络 ${net.name}<br>`;
+  html += holder
+    ? `<span class="ok">✓ 已验证 Agent ID 持有人${net.mock?"（测试网 Mock 注册表）":""}</span>`
+    : `<span class="err">✗ 该地址未持有 Agent ID，收藏/投票/签到不可用</span>`;
+  myProfile = null;
+  if (net.gate){
+    const gate = new ethers.Contract(net.gate, GATE_ABI, provider);
+    const p = await gate.profiles(account);
+    myProfile = p;
+    if (p.registered) html += `<br>我的 .ai 名：<b>${p.agentName}</b> · 连签 <b>${p.streak}</b> 天 · 累计签到 <b>${p.totalCheckIns}</b> 次`;
+    $("regBar").style.display = p.registered ? "none" : (holder ? "flex" : "none");
+    const today = BigInt(Math.floor(Date.now()/86400000));
+    $("btnCheckIn").disabled = !holder || p.lastCheckInDay === today;
+    $("streakInfo").textContent = p.lastCheckInDay === today ? "今日已签到" : (holder ? "今日未签到" : "");
+  } else {
+    html += `<br><span class="warn">主网看板合约已部署。</span>`;
+    $("regBar").style.display = "none"; $("btnCheckIn").disabled = true; $("streakInfo").textContent = "";
+  }
+  $("meBody").innerHTML = html;
+}
+
+async function ensureWalletChain(){
+  const want = "0x" + chainId.toString(16);
+  const cur = await window.ethereum.request({ method: "eth_chainId" });
+  if (cur !== want){
+    try { await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: want }] }); }
+    catch(e){
+      if (e.code === 4902){
+        const net = NETS[chainId];
+        await window.ethereum.request({ method: "wallet_addEthereumChain", params: [{ chainId: want, chainName: net.name, rpcUrls: [net.rpc], nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 }, blockExplorerUrls: [net.explorer] }] });
+      } else throw e;
+    }
+  }
+}
+
+async function connect(){
+  if (!window.ethereum){ toast("没检测到钱包插件：请用 Binance Wallet / MetaMask / OKX Wallet 打开本页"); return; }
+  await ensureWalletChain();
+  const bp = new ethers.BrowserProvider(window.ethereum);
+  signer = await bp.getSigner();
+  account = await signer.getAddress();
+  provider = bp;
+  $("btnConnect").textContent = "已连接 " + short(account);
+  $("acct").textContent = NETS[chainId].name;
+  await refreshMe(); await loadBoard();
+  toast("钱包已连接");
+}
+
+async function act(kind, id, btn){
+  if (!signer || !NETS[chainId].gate) return;
+  btn.disabled = true;
+  try {
+    const gate = new ethers.Contract(NETS[chainId].gate, GATE_ABI, signer);
+    const tx = await (kind==="bm" ? gate.toggleBookmark(id) : gate.upvote(id));
+    toast("交易已发送，等待上链…");
+    await tx.wait();
+    toast(kind==="bm" ? "收藏状态已更新" : "投票成功");
+    await loadBoard(); await refreshMe();
+  } catch(e){ toast("失败：" + (e.shortMessage || e.message || e)); btn.disabled = false; }
+}
+
+$("btnConnect").onclick = () => connect().catch(e => toast("连接失败：" + (e.shortMessage || e.message || e)));
+$("netSel").onchange = async e => { chainId = Number(e.target.value); account = null; signer = null; $("btnConnect").textContent = "连接钱包"; $("acct").textContent = ""; await loadBoard(); $("mePanel").style.display="none"; };
+$("q").oninput = render; $("stageSel").onchange = render; $("sortSel").onchange = render;
+$("btnRegister").onclick = async () => {
+  const name = $("regName").value.trim();
+  if (name.length < 3) return toast("名字至少 3 个字符");
+  try {
+    const gate = new ethers.Contract(NETS[chainId].gate, GATE_ABI, signer);
+    const tx = await gate.registerProfile(name); toast("登记交易已发送…"); await tx.wait();
+    toast("登记成功"); await refreshMe();
+  } catch(e){ toast("登记失败：" + (e.shortMessage || e.message || e)); }
+};
+$("btnCheckIn").onclick = async () => {
+  try {
+    const gate = new ethers.Contract(NETS[chainId].gate, GATE_ABI, signer);
+    const tx = await gate.checkIn(); toast("签到交易已发送…"); await tx.wait();
+    toast("签到成功"); await refreshMe(); await loadBoard();
+  } catch(e){ toast("签到失败：" + (e.shortMessage || e.message || e)); }
+};
+if (window.ethereum) window.ethereum.on("accountsChanged", () => location.reload());
+loadBoard().catch(e => toast("数据加载失败：" + e.message));
+</script>
+</body>
+</html>
