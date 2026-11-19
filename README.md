@@ -4,6 +4,9 @@
 
 AgentBoard aggregates Agent ID-exclusive token launches (Four.Meme protocol 2004) and free mints into one board. Every social action on the board — registering your `.ai` name, daily check-ins, bookmarks and upvotes — is gated on-chain by **Agent ID ownership**: one wallet = one (non-transferable) Agent ID, so votes and streaks cannot be farmed with fresh wallets.
 
+**Live demo:** https://qazzk13.github.io/agentboard/
+**Source:** https://github.com/qazzk13/agentboard
+
 ## Live contracts (BNB Chain mainnet)
 
 | Contract | Address |
