@@ -1,157 +1,29 @@
 {
-  "generatedAt": "2026-11-19T15:04:04.784854+08:00",
-  "scanTime": "2026-11-19T15:04:04.784854+08:00",
+  "generatedAt": "2026-11-20T10:22:00.207073+08:00",
+  "scanTime": "2026-11-20T10:22:00.207073+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
-    "Finalizing": 8,
-    "New": 8
+    "Finalizing": 1,
+    "New": 1
   },
-  "count": 8,
+  "count": 1,
   "projects": [
     {
-      "name": "¥",
-      "symbol": "¥",
-      "contract": "0x99b4573f8dead9df9fbfa2b27bcc845748414444",
+      "name": "Or.ia",
+      "symbol": "OR",
+      "contract": "0x9080d274f63c7dbc66f152910071cb5035a74444",
       "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795047550000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
+      "progress": "1.25",
+      "holders": 1,
+      "createTime": 1795141272000,
+      "liquidity": "64.37933328571744",
+      "marketCap": "3218.97",
+      "volume": "32.189666642859",
       "top10Percent": "100",
       "sniperPercent": null,
       "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "EEEAAAOOO",
-      "symbol": "EAOCAT",
-      "contract": "0xb0ec8fe27a0d67a6d6547ce25789bdd1195cffff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795034068000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "BNCUT",
-      "symbol": "BNCUT",
-      "contract": "0xc62d61dfc5f18b3dc4f3c9e1492b11f41af94444",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795022423000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "Jensen",
-      "symbol": "Jensen Huang",
-      "contract": "0x5fae0c910c59643f3cec7fc1a6db4e312934ffff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795001279000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "Jensen",
-      "symbol": "Jensen Huang",
-      "contract": "0xea3fb20fa2617fe14d0a5429608b71fe3462ffff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795001195000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "Jensen",
-      "symbol": "Jensen Huang",
-      "contract": "0xa6d29391e489c2172119f8eab9be8089aa5cffff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795001164000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "Nile USD",
-      "symbol": "NUSD",
-      "contract": "0x80bbc7f2bb89bb152e6830befdbd3a8d155affff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": 0,
-      "createTime": 1795000955000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": "100",
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
-    },
-    {
-      "name": "Nile USD",
-      "symbol": "NUSD",
-      "contract": "0x9ba3de8d5987ee761d315d3e00f94fccbf0bffff",
-      "stage": "Finalizing",
-      "progress": "0",
-      "holders": null,
-      "createTime": 1795000916000,
-      "liquidity": null,
-      "marketCap": null,
-      "volume": null,
-      "top10Percent": null,
-      "sniperPercent": null,
-      "audit": "未审计",
-      "flags": [
-        "暂无持有人，极早期"
-      ]
+      "flags": []
     }
   ]
 }
