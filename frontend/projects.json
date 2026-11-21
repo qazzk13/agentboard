@@ -1,29 +1,85 @@
 {
-  "generatedAt": "2026-11-20T10:22:00.207073+08:00",
-  "scanTime": "2026-11-20T10:22:00.207073+08:00",
+  "generatedAt": "2026-11-21T10:21:59.216995+08:00",
+  "scanTime": "2026-11-21T10:21:59.216995+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
-    "Finalizing": 1,
-    "New": 1
+    "Finalizing": 4,
+    "New": 4
   },
-  "count": 1,
+  "count": 4,
   "projects": [
     {
-      "name": "Or.ia",
-      "symbol": "OR",
-      "contract": "0x9080d274f63c7dbc66f152910071cb5035a74444",
+      "name": "CZ眼中的CZ",
+      "symbol": "CZ眼中的CZ",
+      "contract": "0xf51a8055f14162efdf82d01fee98782134e4ffff",
       "stage": "Finalizing",
-      "progress": "1.25",
-      "holders": 1,
-      "createTime": 1795141272000,
-      "liquidity": "64.37933328571744",
-      "marketCap": "3218.97",
-      "volume": "32.189666642859",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795179220000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
       "top10Percent": "100",
       "sniperPercent": null,
       "audit": "未审计",
-      "flags": []
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "Gatropic",
+      "symbol": "GATropic",
+      "contract": "0xf1773c10f0adb88de5b0629c07b4de797710ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795163513000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "电脑课",
+      "symbol": "电脑课",
+      "contract": "0x24fe85f01c475a16cbc2ea54efe67c397638ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795160958000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "电脑课",
+      "symbol": "电脑课",
+      "contract": "0x1ed0d50f3b3f7408e7177ac5f5e20e9d1e24ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795160938000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
     }
   ]
 }
