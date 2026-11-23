@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-22T10:21:55.693123+08:00",
-  "scanTime": "2026-11-22T10:21:55.693123+08:00",
+  "generatedAt": "2026-11-23T10:21:57.249738+08:00",
+  "scanTime": "2026-11-23T10:21:57.249738+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
@@ -10,13 +10,13 @@
   "count": 2,
   "projects": [
     {
-      "name": "BRAZIL DOLARIZADO",
-      "symbol": "BRD",
-      "contract": "0xccd602a64e5bfbf725413c4b31b7f608affdffff",
+      "name": "Burnedfi Machine",
+      "symbol": "BurnMax",
+      "contract": "0x4c715abc876eeb864d7aaa2f27ad17433befffff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795307683000,
+      "createTime": 1795375036000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
@@ -28,13 +28,13 @@
       ]
     },
     {
-      "name": "Crash crypto",
-      "symbol": "Crashy",
-      "contract": "0x55acd2fcba51c056ad41270391d6b83076604444",
+      "name": "Unison",
+      "symbol": "UNISON",
+      "contract": "0xdcd8330347e761eb81c3f4aed3e4f4b36b2affff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795268421000,
+      "createTime": 1795372992000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
