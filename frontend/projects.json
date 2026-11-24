@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-23T12:46:29.498476+08:00",
-  "scanTime": "2026-11-23T12:46:29.498476+08:00",
+  "generatedAt": "2026-11-24T10:22:09.145359+08:00",
+  "scanTime": "2026-11-24T10:22:09.145359+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
@@ -10,13 +10,13 @@
   "count": 2,
   "projects": [
     {
-      "name": "Burnedfi Machine",
-      "symbol": "BurnMax",
-      "contract": "0x4c715abc876eeb864d7aaa2f27ad17433befffff",
+      "name": "TRUELOVE NFT",
+      "symbol": "TRU💓",
+      "contract": "0x97fc1949a72a23eaaf40149737739a6f708effff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795375036000,
+      "createTime": 1795467674000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
@@ -28,13 +28,13 @@
       ]
     },
     {
-      "name": "Unison",
-      "symbol": "UNISON",
-      "contract": "0xdcd8330347e761eb81c3f4aed3e4f4b36b2affff",
+      "name": "TRUELOVE NFT",
+      "symbol": "TRU💗",
+      "contract": "0x80fed54f2b733a6794c44f5cc2a7145dbc68ffff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795372992000,
+      "createTime": 1795465927000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
