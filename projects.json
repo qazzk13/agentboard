@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-11-24T10:22:09.145359+08:00",
-  "scanTime": "2026-11-24T10:22:09.145359+08:00",
+  "generatedAt": "2026-11-25T10:22:07.074253+08:00",
+  "scanTime": "2026-11-25T10:22:07.074253+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
-    "Finalizing": 2,
-    "New": 2
+    "Finalizing": 4,
+    "New": 4
   },
-  "count": 2,
+  "count": 4,
   "projects": [
     {
-      "name": "TRUELOVE NFT",
-      "symbol": "TRU💓",
-      "contract": "0x97fc1949a72a23eaaf40149737739a6f708effff",
+      "name": "$SPR",
+      "symbol": "$SPR",
+      "contract": "0x49c27789953dc3fa5a853262dd8e73c97b07ffff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795467674000,
+      "createTime": 1795551373000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
@@ -28,13 +28,13 @@
       ]
     },
     {
-      "name": "TRUELOVE NFT",
-      "symbol": "TRU💗",
-      "contract": "0x80fed54f2b733a6794c44f5cc2a7145dbc68ffff",
+      "name": "Alphatradex",
+      "symbol": "ATX",
+      "contract": "0xb5e2d95aa679b1078e4bc6b81c60edfdf6b34444",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795465927000,
+      "createTime": 1795510168000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
@@ -44,6 +44,38 @@
       "flags": [
         "暂无持有人，极早期"
       ]
+    },
+    {
+      "name": "Alphatradex",
+      "symbol": "ATX",
+      "contract": "0x072336510da837df231b7beb0d9d223c4a734444",
+      "stage": "Finalizing",
+      "progress": "1.25",
+      "holders": 1,
+      "createTime": 1795510161000,
+      "liquidity": "63.64320001591314",
+      "marketCap": "3233.31",
+      "volume": "865.2723923817231",
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": []
+    },
+    {
+      "name": "DRAW MY CIRCLE",
+      "symbol": "DRAWN",
+      "contract": "0x4fc0bf55278b86d3008a4da70e50c1bf63234444",
+      "stage": "Finalizing",
+      "progress": "1.2867",
+      "holders": 2,
+      "createTime": 1795507323000,
+      "liquidity": "65.89918314218698",
+      "marketCap": "3232.47",
+      "volume": "1559.023282291182",
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": []
     }
   ]
 }
