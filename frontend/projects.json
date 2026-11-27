@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-11-25T10:22:07.074253+08:00",
-  "scanTime": "2026-11-25T10:22:07.074253+08:00",
+  "generatedAt": "2026-11-27T10:23:28.841592+08:00",
+  "scanTime": "2026-11-27T10:23:28.841592+08:00",
   "source": "meme-rush CLI, Four.Meme protocol 2004, live fetch",
   "stageCounts": {
     "Migrated": 0,
-    "Finalizing": 4,
-    "New": 4
+    "Finalizing": 15,
+    "New": 15
   },
-  "count": 4,
+  "count": 15,
   "projects": [
     {
-      "name": "$SPR",
-      "symbol": "$SPR",
-      "contract": "0x49c27789953dc3fa5a853262dd8e73c97b07ffff",
+      "name": "aimeme",
+      "symbol": "aime",
+      "contract": "0xd0f23781f5f1e83d0106bc7c71457158f142ffff",
       "stage": "Finalizing",
       "progress": "0",
       "holders": 0,
-      "createTime": 1795551373000,
+      "createTime": 1795741264000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
@@ -28,17 +28,17 @@
       ]
     },
     {
-      "name": "Alphatradex",
-      "symbol": "ATX",
-      "contract": "0xb5e2d95aa679b1078e4bc6b81c60edfdf6b34444",
+      "name": "aimeme",
+      "symbol": "aime",
+      "contract": "0xb93feada4211ccbba38dd7754681c23ebed1ffff",
       "stage": "Finalizing",
       "progress": "0",
-      "holders": 0,
-      "createTime": 1795510168000,
+      "holders": null,
+      "createTime": 1795741250000,
       "liquidity": null,
       "marketCap": null,
       "volume": null,
-      "top10Percent": "100",
+      "top10Percent": null,
       "sniperPercent": null,
       "audit": "未审计",
       "flags": [
@@ -46,36 +46,232 @@
       ]
     },
     {
-      "name": "Alphatradex",
-      "symbol": "ATX",
-      "contract": "0x072336510da837df231b7beb0d9d223c4a734444",
+      "name": "Tytus",
+      "symbol": "TYT",
+      "contract": "0xac7d50ba0cff6d2bbbde1587bb08ed7c1dcf4444",
       "stage": "Finalizing",
-      "progress": "1.25",
+      "progress": "2.084379",
       "holders": 1,
-      "createTime": 1795510161000,
-      "liquidity": "63.64320001591314",
-      "marketCap": "3233.31",
-      "volume": "865.2723923817231",
+      "createTime": 1795714221000,
+      "liquidity": "107.76357834167591",
+      "marketCap": "3303.1",
+      "volume": "119.7654913978427",
       "top10Percent": "100",
       "sniperPercent": null,
       "audit": "未审计",
       "flags": []
     },
     {
-      "name": "DRAW MY CIRCLE",
-      "symbol": "DRAWN",
-      "contract": "0x4fc0bf55278b86d3008a4da70e50c1bf63234444",
+      "name": "Fuum",
+      "symbol": "Fuh",
+      "contract": "0xa1943bac186c970963d5e3396a6c942b19e74444",
       "stage": "Finalizing",
-      "progress": "1.2867",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795707000000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "Ryao",
+      "symbol": "Ryo",
+      "contract": "0xe1465ebccb3ca3ee9f7c8a8a1a738e0271714444",
+      "stage": "Finalizing",
+      "progress": "2.487498",
       "holders": 2,
-      "createTime": 1795507323000,
-      "liquidity": "65.89918314218698",
-      "marketCap": "3232.47",
-      "volume": "1559.023282291182",
+      "createTime": 1795706512000,
+      "liquidity": "129.49747756082212",
+      "marketCap": "3284.29",
+      "volume": "64.75564592076094",
       "top10Percent": "100",
       "sniperPercent": null,
       "audit": "未审计",
       "flags": []
+    },
+    {
+      "name": "Bear coin",
+      "symbol": "BABY BEAR COIN",
+      "contract": "0xcb4b11629f5c9f9c6bec003988c02d759f324444",
+      "stage": "Finalizing",
+      "progress": "2.487498",
+      "holders": 2,
+      "createTime": 1795706194000,
+      "liquidity": "129.69827272731175",
+      "marketCap": "3329.53",
+      "volume": "103.96937500211901",
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": []
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x7cc75ef34525ae5bd96bc7509f02f1f56facffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681368000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x8cd7897ddb41b431781675ba748c17625456ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681357000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x9b65253d7d6a7b8c90cba10138ca70b54954ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681341000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x58bf6374e840f9e88cb274c38ac1541e1b2effff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681326000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0xe22bb69b54a6b227b2173e7888459c1bc5c5ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681297000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x2b6761a5a35428c900253b15b7b2c4e8bd49ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681281000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0xa16e2c7d1f7a10d698a73f3182cc80ec4334ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681266000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "CQG",
+      "contract": "0x7319c575804a475149959fecc0d2678ffcc7ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": null,
+      "createTime": 1795681250000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": null,
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
+    },
+    {
+      "name": "存钱罐",
+      "symbol": "存钱罐",
+      "contract": "0x0830eb9dd581b088c3f9095c1fae2f4580f9ffff",
+      "stage": "Finalizing",
+      "progress": "0",
+      "holders": 0,
+      "createTime": 1795681176000,
+      "liquidity": null,
+      "marketCap": null,
+      "volume": null,
+      "top10Percent": "100",
+      "sniperPercent": null,
+      "audit": "未审计",
+      "flags": [
+        "暂无持有人，极早期"
+      ]
     }
   ]
 }
